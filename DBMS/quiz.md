@@ -88,7 +88,7 @@ Which of the following PostgreSQL features is used to ensure compliance with GDP
 - [ ] Row-Level Security
 ## Answer
 4. Row-Level Security
-
+- [ ] Partitioning  -- check this
 # Question 8
 ## Tags
 #dbms #rdbms #acid #isolation
