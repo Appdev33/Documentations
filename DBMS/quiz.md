@@ -36,6 +36,21 @@ Which of the following queries will correctly fetch all users whose email contai
 ## Answer
 2. `SELECT * FROM users WHERE email LIKE ‘%gmail.com%’`
 
+
+
+# Question 3
+## Tags
+#dbms #rdbms #sql #mysql #dirty_read
+## Question
+In MySQL, which isolation level prevents dirty reads but allows non-repeatable reads?
+## Options
+- [ ] Read Uncommitted
+- [ ] Read Committed
+- [ ] Repeatable Read
+- [ ] Serializable
+## Answer
+2. Read Committed
+
 ```sql
 
 Isolation Levels in MySQL (and SQL standard):
@@ -57,19 +72,6 @@ Basically transactions run as if executed one after another.
 👉 Correct answer: Read Committed ✅
 
 ```
-
-# Question 3
-## Tags
-#dbms #rdbms #sql #mysql #dirty_read
-## Question
-In MySQL, which isolation level prevents dirty reads but allows non-repeatable reads?
-## Options
-- [ ] Read Uncommitted
-- [ ] Read Committed
-- [ ] Repeatable Read
-- [ ] Serializable
-## Answer
-2. Read Committed
 
 # Question 4
 ## Tags
