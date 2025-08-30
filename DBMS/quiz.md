@@ -11,6 +11,22 @@ In PostgreSQL, which of the following is true about foreign key constraints?
 ## Answer
 2. `ON DELETE CASCADE` deletes referencing rows automatically
 
+```python
+"Deleting a referenced row will always result in an error"
+❌ Not always true. By default, deleting a referenced row without handling the FK would raise an error (ON DELETE RESTRICT behavior), but you can change it with ON DELETE CASCADE, ON DELETE SET NULL, etc.
+
+"ON DELETE CASCADE deletes referencing rows automatically"
+✅ Correct. If the parent row is deleted, all referencing (child) rows are automatically deleted.
+
+"ON DELETE SET NULL sets the referencing column to zero"
+❌ Wrong. It sets the referencing column to NULL, not zero (and only if the column is nullable).
+
+"Foreign key constraints can only reference primary keys of other tables"
+❌ Not strictly true. They can reference any column (or set of columns) with a unique constraint (primary key OR unique key).
+
+👉 Correct answer: ON DELETE CASCADE deletes referencing rows automatically ✅
+```
+
 # Question 2
 ## Tags
 #dbms #rdbms #sql #postgresql #pattern_matching #like
