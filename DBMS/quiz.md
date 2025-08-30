@@ -14,16 +14,12 @@ In PostgreSQL, which of the following is true about foreign key constraints?
 ```python
 "Deleting a referenced row will always result in an error"
 ❌ Not always true. By default, deleting a referenced row without handling the FK would raise an error (ON DELETE RESTRICT behavior), but you can change it with ON DELETE CASCADE, ON DELETE SET NULL, etc.
-
 "ON DELETE CASCADE deletes referencing rows automatically"
 ✅ Correct. If the parent row is deleted, all referencing (child) rows are automatically deleted.
-
 "ON DELETE SET NULL sets the referencing column to zero"
 ❌ Wrong. It sets the referencing column to NULL, not zero (and only if the column is nullable).
-
 "Foreign key constraints can only reference primary keys of other tables"
 ❌ Not strictly true. They can reference any column (or set of columns) with a unique constraint (primary key OR unique key).
-
 👉 Correct answer: ON DELETE CASCADE deletes referencing rows automatically ✅
 ```
 
@@ -41,34 +37,21 @@ Which of the following queries will correctly fetch all users whose email contai
 2. `SELECT * FROM users WHERE email LIKE ‘%gmail.com%’`
 
 ```sql
+
 Isolation Levels in MySQL (and SQL standard):
-
 Read Uncommitted
-
 Allows dirty reads ❌ (you can see uncommitted changes from other transactions).
-
 Lowest isolation level.
-
 Read Committed
-
 Prevents dirty reads ✅
-
 But still allows non-repeatable reads (data can change if re-read in the same transaction).
-
 Used by Oracle, SQL Server by default.
-
 Repeatable Read (MySQL default)
-
 Prevents dirty reads ✅
-
 Prevents non-repeatable reads ✅
-
 But allows phantom reads (new rows appearing in a repeated query).
-
 Serializable
-
 Strictest level. Prevents dirty, non-repeatable, and phantom reads.
-
 Basically transactions run as if executed one after another.
 
 👉 Correct answer: Read Committed ✅
